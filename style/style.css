@@ -1,0 +1,311 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+.container-fluid {
+	width: 100%;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*Style header*/
+
+header .container-fluid {
+	background-color: white;
+	height: 70px;
+	box-shadow: 0px 0px 4px 0px grey;
+	z-index: 5;
+	position: fixed;
+}
+
+nav .container {
+	display: flex;
+	height: 70px;
+	justify-content: space-between;
+	align-items: center;
+	color: #20c997 ;
+	z-index: 2; 
+}
+
+nav .container ul {
+	display: flex;
+	list-style: none;
+	width: 	40%;
+	justify-content: space-between;
+}
+
+nav .container li:hover {
+	font-weight: 700;
+	transition: 0.5s;
+}
+
+nav a {
+	color: #20c997 ;
+}
+
+nav h3 span {
+	font-weight: 400;
+}
+
+.menu-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 30px;
+	border-radius: 5px;
+	padding: 5px;
+	border: 2px solid #20c997;
+
+}
+
+.menu-toggle:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	transition: 1s;
+}
+
+.menu-toggle span {
+	display: block;
+	height: 2px;
+	width: 	25px;
+	background-color: #20c997	;
+}
+
+/*style hero*/
+
+.hero {
+	padding-top: 80px;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(160deg,#20c997,cyan); 
+}
+
+.hero .container {
+	display: flex;
+	align-items: center;
+}
+
+.hero-title {
+	line-height: 40px;
+	color: white;
+}
+
+.hero-item {
+	width: 50%;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	background-color:#20c997 ;
+	width: 25%;
+	/*padding: 0px 10px 0px 18px;*/
+	color: white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 0px grey ;
+}
+
+.btn:hover {
+	transition: 0.8s;
+	opacity: 0.8;
+}
+
+/*style content*/
+
+.content{
+	display: flex;
+	flex-direction: row;
+}
+
+.primary-content {
+	border-radius: 5px;
+	width: 60%;
+}
+
+section {
+	padding: 50px 10px 0px 10px;
+	line-height: 30px;
+	color:#20c997 ;
+}
+
+section p {
+	text-align: justify;
+}
+
+.content-img {
+	display: flex;
+	justify-items: space-between;
+	padding-top: 50px;
+}
+
+.content-img-port {
+	display: flex;
+	justify-items: space-between;
+	padding-top: 50px;
+}
+
+.skill img {
+	width: 	20%;
+}
+
+.portofolio img {
+	width: 	50%;
+	display: flex;
+	padding: 10px;
+}
+
+.portofolio	{
+	margin-bottom: 	50px;
+}	
+
+aside {
+	width: 35%;
+	display: flex;
+	margin: 50px 35px 35px 35px;
+	height: 350px;
+	justify-content: space-evenly;
+	border: 1px solid #20c997;
+	flex-direction: column;
+	border-radius: 30px;
+	box-shadow: 0px 1px px 0px #20c997;
+}
+
+.aside-img {
+	display: flex;
+	justify-content: center;
+}
+
+.detail {
+	color: #20c997;
+	text-align: center;
+	line-height: 25px;
+}
+
+
+aside img {
+	width: 30%;
+	border-radius: 500px;
+}
+
+/*style footer*/
+
+footer {
+	background-color: #20c997;
+	height: 70px;
+	display: flex;
+	text-align: center	;
+	color: 	white;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width : 768px) {
+	nav .container ul {
+		width: 	60%;
+	}
+}
+
+@media screen and (max-width : 576px) {
+	nav .container ul {
+		position: fixed;
+		margin-top: 60px;
+		padding-left: 35px;
+		right: 	0;
+		top: 0;
+		width: 100%;
+		justify-content: space-evenly;
+		flex-direction: column;  
+		background-color: white;
+		z-index: -1;
+		height: 40%;
+		transform: translateX(100%);
+		transition: all 1s;
+	}
+
+	.menu-toggle {
+		display: flex;
+		z-index: 2;
+	}
+
+	nav .container ul.slide {
+		transform: translateX(0);
+		z-index: ;
+	} 
+
+	.noshadow {
+		background-color: white;
+		height: 70px;
+		box-shadow: 0px 0px 0px 0px grey !important;
+	}
+
+	.hero .container {
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+
+	.hero-item {
+		width: 100%;
+	}
+
+	.hero-title {
+		line-height: 25px;
+		text-align: center;
+	}
+
+	.hero-title h1 {
+		font-size: 20px;
+	}
+
+	.btn {
+		margin-top: 10px;
+		width: 100% !important;
+		padding: 5px 0px;
+	}
+
+	.content {
+		flex-direction: column;
+	}
+
+	.primary-content {
+		width: 	100%;
+	}
+
+	.portofolio img {
+		width: 	100%;
+		flex-direction: column	;
+	}
+
+	.content-img-port {
+		flex-direction: column;
+	}
+
+	aside {
+		width: 	100%;
+		margin: 20px 0px 50px 0px;
+	}	
+
+
+}
